@@ -113,8 +113,6 @@ function sumScore(event){
             let audio = new Audio()
             audio.src = 'music.mp3'
             audio.play()
-            
-            
         }else{
             if(target.classList.contains('passiveSquares')){
                 count = count - 50
