@@ -1,84 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>The GAME</title>
-</head>
-<body>
-    <header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
         <nav>
-            <div class="container">
-                <div class="navigate">
-                    <h1>
-                        THE GAME
-                    </h1>
-                    <ul class="navigate__menu">
-                        <li>
-                            <button id="btn-1">
-                                START
-                            </button>
-                        </li>
-                        <li>
-                            <button id="btn-2">
-                                STOP
-                            </button>
-                        </li>
-                        <li>
-                            <button id="btn-3">
-                                RAITING
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+          <div class="container">
+            <div class="navigate">
+              <h1>CATCH THE RED SQUARE</h1>
+              <ul class="navigate__menu">
+                <li>
+                  <button id="btn-1">START</button>
+                </li>
+                <li>
+                  <button id="btn-2">STOP</button>
+                </li>
+                <li>
+                  <button id="btn-3">RAITING</button>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
-    </header>
-    <main>
+      </header>
+      <main class="main">
         <div class="modal">
-            <div class="modal__main">
-                <h2 class="modal__title">Привет, друг!</h2>
-                <p class="modal__content">
-                    Добро пожаловать в игру! <br>Для начала испытания нажми кнопку старт!
-                </p>
-                <button class="modal__close">&#10006;</button>
-            </div>
+          <div class="modal__main">
+            <h2 class="modal__title">Привет!</h2>
+            <p class="modal__content">
+              Добро пожаловать в увлекательную мини-игру <br />
+              Ознакомься с правилами, начинай зарабатывать очки и побеждай <br/>
+              Удачи! &#128516; 
+            </p>
+            <button class="modal__close">&#10006;</button>
+          </div>
         </div>
         <section>
-            <div class="container">
-                <div class="score">
-                    YOUR SCORE: 
-                </div>
-                <div class="play__ground">
-                </div>
-                <div class="timer" time="6000" min="0">60</div>
-            </div>
+          <div class="container">
+            <div class="score">YOUR SCORE:</div>
+            <div class="play__ground"></div>
+            <div class="timer" time="60000" min="0">60</div>
+          </div>
         </section>
         <section>
-            <div class="container">
-                <div class="newBox">
-                        <label>
-                            Введите имя: 
-                        </label>
-                        <input type="text">
-                    <p class="text"> 
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, 
-                        quam fuga eum ullam velit quasi voluptates et, voluptatum labore, 
-                        distinctio voluptatibus animi minima! Cum totam voluptas exercitationem, voluptate delectus at?
-                        distinctio voluptatibus animi minima! Cum totam voluptas exercitationem, voluptate delectus at?
-                    </p>
-                </div>
+          <div class="container">
+            <div class="newBox">
+              <!-- <label> Введите имя: </label>
+              <input type="text" /> -->
+              <p class="text" style="display: none;">
+                В течение одной минуты кликай на <mark>красные</mark> квадраты и зарабатый очки. Один клик равен 100,
+                в случае промаха ты потеряешь 50
+              </p>
             </div>
+          </div>
         </section>
-    </main>
-    <footer>
+      </main>
+      <footer>
         <div class="container">
-            <!-- <ul class="footer__menu">
+          <ul class="footer__menu">
                 <li>
                     <a href="">
                         One
@@ -86,7 +77,7 @@
                 </li>
                 <li>
                     <a href="">
-                        Two
+                        © 2023 akoceryzhkin@gmail.com
                     </a>
                 </li>
                 <li>
@@ -94,13 +85,10 @@
                         Three   
                     </a>
                 </li>
-            </ul> -->
+            </ul>
         </div>
-    </footer>
-
-
-
+      </footer>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-

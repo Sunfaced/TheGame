@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -15,6 +20,12 @@ body {
   background-color: rgb(251, 233, 233);
 }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 10px;
@@ -22,7 +33,7 @@ body {
 }
 
 .navigate {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .navigate__menu {
@@ -32,6 +43,8 @@ body {
 
 h1 {
   text-align: center;
+  padding-bottom: 50px;
+  letter-spacing: 10px;
 }
 
 ul {
@@ -74,6 +87,10 @@ button:hover {
   width: 400px;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -84,7 +101,7 @@ button:hover {
 
 .modal__main {
   position: relative;
-  max-width: 600px;
+  height: 395px;
   background-color: azure;
   margin: auto;
   border-radius: 16px;
@@ -151,13 +168,13 @@ button:hover {
 }
 
 .topRaiting {
-  border-radius: 6px;
+  border-radius: 10px;
   border: 1px solid black;
   display: block;
   position: absolute;
   background-color: rgb(179, 174, 245);
-  top: 220px;
-  right: 420px;
+  top: 325px;
+  right: 410px;
   width: 500px;
 }
 
@@ -167,14 +184,13 @@ button:hover {
 }
 
 footer {
-  height: 150px;
+  /* height: 150px; */
   background: rgb(63, 94, 251);
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 0.6082808123249299) 100%
   );
-  display: block;
 }
 
 .newBox {
@@ -199,4 +215,9 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+mark {
+  color: red;
+  background-color: rgb(251, 233, 233);
 }
