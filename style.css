@@ -32,9 +32,9 @@ body {
   margin: 0 auto;
 }
 
-.navigate {
-  /* margin-top: 50px; */
-}
+/* .navigate {
+  margin-top: 50px;
+} */
 
 .navigate__menu {
   display: flex;
