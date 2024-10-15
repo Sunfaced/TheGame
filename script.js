@@ -64,7 +64,7 @@ function startGame() {
       timer.textContent = 60;
       clearInterval(intervalTimer);
       let audio = new Audio();
-      audio.src = "music3.mp3";
+      audio.src = "music3-3.mp3";
       audio.play();
     }
   }, changeTime / n);
@@ -112,14 +112,14 @@ function sumScore(event) {
       count = count + 100;
       score.textContent = count;
       let audio = new Audio();
-      audio.src = "music.mp3";
+      audio.src = "music1-1.mp3";
       audio.play();
     } else {
       if (target.classList.contains("passiveSquares")) {
         count = count - 50;
         score.textContent = count;
         let audio = new Audio();
-        audio.src = "music2.mp3";
+        audio.src = "music2-2.mp3";
         audio.play();
       }
     }
