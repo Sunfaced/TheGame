@@ -13,7 +13,7 @@ const text = document.querySelector(".text");
 let is_game_active = false;
 let is_game_stopped = false;
 let count = 0;
-let arr;
+let arr = [];
 
 if (localStorage.places) {
   arr = JSON.parse(localStorage.getItem("places"));
@@ -46,9 +46,11 @@ btnOne.addEventListener("click", startGame);
 
 function startGame() {
   is_game_active = true;
+  is_game_stopped = false;
   score.textContent = 0;
   count = 0;
   timer.style.display = "flex";
+  timer.textContent = 60;
   const changeTime = +timer.getAttribute("time");
   let n = +timer.textContent;
   const min = +timer.getAttribute("min");
@@ -61,7 +63,6 @@ function startGame() {
     timer.textContent = n;
     if (n < min || is_game_stopped) {
       timer.style.display = "none";
-      timer.textContent = 60;
       clearInterval(intervalTimer);
       let audio = new Audio();
       audio.src = "music3-3.mp3";
@@ -82,7 +83,6 @@ function startGame() {
         el.classList.remove("activeSquares");
       });
       is_game_active = false;
-      is_game_stopped = false;
     } else {
       const randomIndex = Math.floor(Math.random() * ourDivs.length);
       ourDivs.forEach(function (el, i) {
@@ -132,17 +132,17 @@ let check = 2;
 
 function showRaiting() {
   if (check % 2 === 0) {
-    const ratingContainer = document.querySelector('.rating-container');
+    const ratingContainer = document.querySelector(".rating-container");
     let listRaiting = document.createElement("div");
     listRaiting.classList.add("topRaiting");
 
     let raitingList = `
       <ul class="rating-list">
-        <li id="firstPlace">1st place - ${arr[0] || 'Empty'}</li>
-        <li id="secondPlace">2nd place - ${arr[1] || 'Empty'}</li>
-        <li id="thirdPlace">3rd place - ${arr[2] || 'Empty'}</li>
-        <li id="fourthPlace">4th place - ${arr[3] || 'Empty'}</li>
-        <li id="fifthPlace">5th place - ${arr[4] || 'Empty'}</li>
+        <li id="firstPlace">1st place - ${arr[0] || "Empty"}</li>
+        <li id="secondPlace">2nd place - ${arr[1] || "Empty"}</li>
+        <li id="thirdPlace">3rd place - ${arr[2] || "Empty"}</li>
+        <li id="fourthPlace">4th place - ${arr[3] || "Empty"}</li>
+        <li id="fifthPlace">5th place - ${arr[4] || "Empty"}</li>
       </ul>
     `;
 
