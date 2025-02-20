@@ -132,27 +132,22 @@ let check = 2;
 
 function showRaiting() {
   if (check % 2 === 0) {
+    const ratingContainer = document.querySelector('.rating-container');
     let listRaiting = document.createElement("div");
-    navigateList.append(listRaiting);
     listRaiting.classList.add("topRaiting");
 
-    let raitingList = `<li id=firstPlace>Первое место - ${
-      arr[0] ? arr[0] : ""
-    } </li>
-                            <li id=secondPlace>Второе место - ${
-                              arr[1] ? arr[1] : ""
-                            } </li>
-                            <li id=thirdPlace>Третье место - ${
-                              arr[2] ? arr[2] : ""
-                            } </li> 
-                            <li id=fourthPlace>Четвертое место - ${
-                              arr[3] ? arr[3] : ""
-                            } </li>
-                            <li id=fifthPlace>Пятое место - ${
-                              arr[4] ? arr[4] : ""
-                            } </li>`;
+    let raitingList = `
+      <ul class="rating-list">
+        <li id="firstPlace">1st place - ${arr[0] || 'Empty'}</li>
+        <li id="secondPlace">2nd place - ${arr[1] || 'Empty'}</li>
+        <li id="thirdPlace">3rd place - ${arr[2] || 'Empty'}</li>
+        <li id="fourthPlace">4th place - ${arr[3] || 'Empty'}</li>
+        <li id="fifthPlace">5th place - ${arr[4] || 'Empty'}</li>
+      </ul>
+    `;
 
     listRaiting.insertAdjacentHTML("beforeend", raitingList);
+    ratingContainer.appendChild(listRaiting);
     check = check + 1;
   } else {
     let listRaiting = document.querySelector(".topRaiting");

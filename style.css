@@ -32,10 +32,6 @@ body {
   margin: 0 auto;
 }
 
-/* .navigate {
-  margin-top: 50px;
-} */
-
 .navigate__menu {
   display: flex;
   justify-content: space-around;
@@ -101,9 +97,12 @@ button:hover {
 
 .modal__main {
   position: relative;
-  height: 395px;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  min-height: 300px;
   background-color: azure;
-  margin: auto;
+  margin: 20px auto;
   border-radius: 16px;
   padding: 30px;
   cursor: default;
@@ -168,23 +167,50 @@ button:hover {
 }
 
 .topRaiting {
-  border-radius: 10px;
-  border: 1px solid black;
-  display: block;
-  position: absolute;
-  background-color: rgb(179, 174, 245);
-  top: 325px;
-  right: 410px;
-  width: 500px;
+  border-radius: 15px;
+  border: 2px solid #3c82f8;
+  background-color: rgba(179, 174, 245, 0.95);
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
-.topRaiting > li {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.rating-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rating-list li {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+
+.rating-list li:hover {
+  transform: translateX(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Стили для первых трех мест */
+.rating-list li:nth-child(1) {
+  border-left: 5px solid gold;
+}
+
+.rating-list li:nth-child(2) {
+  border-left: 5px solid silver;
+}
+
+.rating-list li:nth-child(3) {
+  border-left: 5px solid #cd7f32;
 }
 
 footer {
-  /* height: 150px; */
   background: rgb(63, 94, 251);
   background: radial-gradient(
     circle,
@@ -206,11 +232,12 @@ footer {
 }
 
 .footer__menu {
-  width: 1180px;
+  width: auto;
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 
 a {
@@ -220,4 +247,150 @@ a {
 mark {
   color: red;
   background-color: rgb(251, 233, 233);
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .navigate__menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .play__ground {
+    width: 300px;
+    height: 300px;
+  }
+
+  .play__ground > div {
+    width: 90px;
+    height: 90px;
+  }
+
+  .timer {
+    width: 250px;
+    height: 250px;
+    font-size: 80px;
+  }
+
+  .score {
+    width: 100%;
+    max-width: 400px;
+    font-size: 40px;
+  }
+
+  button {
+    width: 200px;
+  }
+
+  button:hover {
+    width: 300px;
+  }
+
+  .footer__menu {
+    height: 80px;
+    padding: 0 15px;
+    font-size: 20px;
+  }
+
+  .modal__main {
+    padding: 20px;
+  }
+
+  .modal__content {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .modal__title {
+    font-size: 28px;
+  }
+
+  .topRaiting {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .rating-list li {
+    font-size: 20px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+
+  .play__ground {
+    width: 270px;
+    height: 270px;
+  }
+
+  .play__ground > div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timer {
+    width: 200px;
+    height: 200px;
+    font-size: 60px;
+  }
+
+  button {
+    width: 180px;
+    height: 60px;
+  }
+
+  button:hover {
+    width: 250px;
+  }
+
+  .footer__menu {
+    height: 60px;
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  .footer__menu a {
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .modal__main {
+    margin: 10px auto;
+    padding: 15px;
+    min-height: 250px;
+  }
+
+  .modal__content {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .modal__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .modal__close {
+    font-size: 30px;
+  }
+
+  .topRaiting {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .rating-list li {
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px 0;
+  }
 }
